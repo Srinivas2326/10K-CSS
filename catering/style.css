@@ -1,0 +1,119 @@
+*{
+    margin:0;
+}
+.main-container{
+    margin:200px;
+    margin-top:60px;
+    margin-bottom:80px;
+}
+.navbar{
+    width:100%;
+    height:50px;
+    padding-right:2px;
+    background-color:white;
+    position:fixed;
+    z-index:12;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+.navbar a{
+    color:black;
+    text-decoration: none;
+    font-size: large;
+    margin:10px;
+}
+.nav{
+    float:right;
+    letter-spacing: 4px;
+}
+.logo{
+    float:left;
+    letter-spacing: 4px;
+}
+.burger{
+    position:relative;
+}
+.burger+h4{
+    position:absolute;
+    left:30px;
+    bottom:40px;
+    color:rgb(113, 106, 106);
+    font-size:45px;
+    letter-spacing: 4px;
+    font-size:x-large;
+}
+.about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.sweet{
+    height:620px;
+}
+.abt-con{
+    margin-left:50px;
+    width:550px;
+    height:620px;
+    gap:10px;
+    font-size: 18px;
+    font-family: 'Times New Roman',Georgia,serif;
+
+}
+.abt-con>h2{
+    text-align:center;
+    letter-spacing: 4px;
+    font-family:"Playfair Display";
+}
+.abt-con h3{
+    text-align:center;
+    letter-spacing: 4px;
+    font-family:"Playfair Display";
+    font-weight: normal;
+}
+span{
+    color:rgb(162, 157, 157);
+}
+.menu{
+    display:flex;
+    justify-content: center;
+    gap:80px;
+}
+.heading{
+    text-align: center;
+    letter-spacing: 4px;
+}
+.our-menu>h4{
+    letter-spacing: 4px;
+}
+.form{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+.form input{
+    width:100%;
+    padding:25px;
+    border: none;
+}
+.btn{
+    background-color: rgb(236, 230, 230);
+    width:150px;
+    height:50px;
+    border:none;
+}
+.btn:hover{
+    background-color: grey;
+}
+.footer{
+    text-align:center;
+    background-color: rgb(234, 231, 231);
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    font-weight: normal;
+}
+h2{
+    letter-spacing: 4px;
+}
