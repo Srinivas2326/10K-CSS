@@ -29,6 +29,11 @@ body{
     float:right;
     letter-spacing: 4px;
 }
+.navbar a:hover{
+    background-color: rgb(113, 106, 106);
+    height:40px;
+    padding-bottom:1px;
+}
 .logo{
     float:left;
     letter-spacing: 4px;
@@ -87,6 +92,11 @@ span{
 }
 .our-menu>h4{
     letter-spacing: 4px;
+    font-weight: normal;
+}
+.our-menu p{
+    color:grey;
+    margin-top:10px;
 }
 .form{
     display:flex;
