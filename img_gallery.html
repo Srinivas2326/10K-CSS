@@ -8,28 +8,22 @@
     <style>
         body {
             background-color: black;
-            margin: 0;
-        }
-        .main {
-            display: flex;
+            display:flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin-left:20%;
         }
         .main-container {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3,200px);
             grid-template-areas:
                 'img1 img1 img2 img3'
                 'img4 img4 img2 img5'
                 'img4 img4 img2 img6';
             gap: 17px;
+            height:50vh;
+            width:60%;
             
-        }
-        div {
-            width: 300px;
-            height: auto;
         }
         img {
             width: 100%;
@@ -56,7 +50,7 @@
     </style>
 </head>
 <body>
-    <div class="main">
+    
         <div class="main-container">
             <div class="img1">
                 <img src="https://tse3.mm.bing.net/th?id=OIP.mtupwKQy9UabTdHvByomDQHaEo&pid=Api&P=0&h=220" class="naruto">
@@ -76,7 +70,6 @@
             <div class="img6">
                 <img src="https://tse2.mm.bing.net/th?id=OIP.euLcjMrJ5TMFSP8J7b3tZgHaEK&pid=Api&P=0&h=220" class="bluelock">
             </div>
-        </div>
     </div>
 </body>
 </html>
