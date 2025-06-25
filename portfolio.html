@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <script src="https://kit.fontawesome.com/e02a3fdad5.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+   
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 270px;
+      height: 100%;
+      background-color: #f1f1f1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      margin: 5px 0;
+    }
+
+    .sidebar a:hover {
+      background-color: #ccc;
+    }
+
+    .social-icons {
+      display:flex;
+    }
+    .social-icons>p{
+        margin:5px
+    }
+    .social-icons i:hover{
+        background-color: #ccc;
+    }
+
+
+    .main-container {
+      margin-left: 270px;
+      padding: 20px;
+      background-color: rgb(210, 205, 205);
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .filter {
+      display: flex;
+      gap: 10px;
+    }
+    .filter>p{
+        background-color: white;
+        padding: 5px 10px;
+    }
+    .filter :hover{
+        background-color: grey;
+        color:white;
+    }
+    .img1 {
+      background-color: white;
+      margin: 10px;
+    }
+    .img1>h3,p{
+        padding-left:10px;
+    }
+
+    .img {
+      width: 370px;
+      height: 200px;
+    }
+    .img:hover{
+        transform: scale(1.05);
+    }
+
+    .frst-row, .scnd-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pages {
+      text-align: center;
+      margin-top:10px;
+    }
+
+    .pages a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+      width:20px;
+      font-size: 25px;
+    }
+    .pages a:hover{
+        background-color: black;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:2px;
+        padding-bottom:2px;
+        color:white;
+    }
+
+    .tech .per {
+      background: grey;
+      text-align:center;
+      padding: 5px;
+      color: white;
+      margin: 5px 0;
+    }
+    .tech>button{
+        background-color: grey;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .basic {
+      width: 350px;
+      border: 1px solid black;
+      margin: 10px;
+      text-align: center;
+    }
+    .basic:hover{
+        background-color: white;
+    }
+    hr{
+        height:3px;
+        background-color: #333;
+        border:none;
+        margin:10px 0
+    }
+    .card-header {
+      color: white;
+      padding: 15px 0;
+    }
+
+    .card span {
+      font-size: 30px;
+    }
+
+    .down-img {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .down-img img {
+      width: 600px;
+      height: 400px;
+    }
+
+    .contact {
+      background-color: #cac2c2;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    .contact-boxes {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .contact-box {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      background-color: #555;
+      margin: 0 5px;
+    }
+
+    .contact-box:nth-child(2) {
+      background-color: #009688;
+    }
+
+    form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .footer {
+      background: grey;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .footer1 {
+      min-width: 250px;
+      color:white;
+    }
+
+    .foot-img {
+      width: 60px;
+      border-radius: 5px;
+    }
+
+    .last {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .blog {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .blog:hover{
+        background-color: #f0f0f0;
+    }
+
+    .travel, .tour {
+      display: inline-block;
+      margin: 2px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color:black
+    }
+
+    .travel {
+      background: black;
+      color: white;
+    }
+
+    .tour {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <img src="https://www.w3schools.com/w3images/avatar_g2.jpg" alt="Profile">
+    <h2>PORTFOLIO</h2>
+    <p>Template by W3.CSS</p>
+    <a href="#" style="color:green"><i class="fa-solid fa-table-cells-large"></i> PORTFOLIO</a>
+    <a href="#about"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;ABOUT</a>
+    <a href="#contact"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;CONTACT</a>
+    <div class="social-icons">
+      <p><i class="fa-brands fa-facebook"></i></p>
+      <p><i class="fa-brands fa-instagram"></i></p>
+      <p><i class="fa-brands fa-square-snapchat"></i></p>
+      <p><i class="fa-brands fa-pinterest-p"></i></p>
+      <p><i class="fa-brands fa-twitter"></i></p>
+      <p><i class="fa-brands fa-linkedin-in"></i></p>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <h1>My Portfolio</h1>
+
+    <div class="filter">
+      <p style="background-color:rgb(210,205,205)">Filter:</p>
+      <p style="background-color:black;color:white" class="all">ALL</p>
+      <p>Design</p>
+      <p>Photos</p>
+      <p>Art</p>
+    </div>
+    <hr style="color:black;height:5px">
+
+    <div class="frst-row">
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/mountains.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/lights.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/nature.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+
+    <div class="scnd-row">
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/p1.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/p2.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+      <div class="img1">
+        <img src="https://www.w3schools.com/w3images/p3.jpg" class="img">
+        <h3>Lorem Ipsum</h3>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed<br> vitae justo condimentum, porta lectus vitae,<br> ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+
+    <div class="pages">
+      <a href="#">«</a>
+      <a href="#"><span style="background-color:black;color:white;padding-right:10px;padding-left:10px;">1</span></a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">»</a>
+    </div>
+
+    <div class="down-img">
+      <img src="https://www.w3schools.com/w3images/avatar_g.jpg">
+      <img src="https://www.w3schools.com/w3images/me2.jpg">
+    </div>
+
+    <div id="about" class="about" >
+      <h2>About Me</h2>
+      <p>Just me, myself and I, exploring the universe of unknownment...</p>
+    </div>
+
+    <div class="tech">
+      <h3>Technical Skills</h3>
+      <p>Photography</p>
+      <p class="per">95%</p>
+      <p>Web Design</p>
+      <p class="per">85%</p>
+      <p>Photoshop</p>
+      <p class="per">80%</p><br>
+      <button>Download Resume</button>
+    </div>
+
+    <h2>How much I charge</h2>
+    <div class="cards">
+      <div class="basic">
+        <div class="card-header" style="background:black;"><h2>Basic</h2></div>
+        <p>Web Design</p><hr>
+        <p>Photography</p><hr>
+        <p>1GB Storage</p><hr>
+        <p>Mail Support</p><hr>
+        <pre><span>$ 10</span>
+per month</pre><hr>
+        <button>Sign Up</button>
+      </div>
+
+      <div class="basic">
+        <div class="card-header" style="background:#009688;"><h2>Pro</h2></div>
+        <p>Web Design</p><hr>
+        <p>Photography</p><hr>
+        <p>50GB Storage</p><hr>
+        <p>Endless Support</p><hr>
+        <pre><span>$ 25</span>
+per month</pre><hr>
+        <button>Sign Up</button>
+      </div>
+
+      <div class="basic">
+        <div class="card-header" style="background:black;"><h2>Premium</h2></div>
+        <p>Web Design</p><hr>
+        <p>Photography</p><hr>
+        <p>Unlimited Storage</p><hr>
+        <p>Endless Support</p><hr>
+        <pre><span>$ 25</span>
+per month</pre><hr>
+        <button id="contact">Sign Up</button>
+      </div>
+    </div>
+
+    <div class="contact">
+      <h3>Contact Me</h3>
+      <div class="contact-boxes">
+        <div class="contact-box">📧<br>srinivas23peddada@gmail.com</div>
+        <div class="contact-box">📍<br>Hyderabad</div>
+        <div class="contact-box">📞<br>123456789</div>
+      </div>
+      <form>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <div class="footer1">
+        <h3>Footer</h3>
+        <pre>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
+condimentum, porta lectus vitae, ultricies congue
+gravida diam non fringilla.
+
+Done by @ Srinu</pre>
+      </div>
+
+      <div class="footer1">
+        <h3>BLOG POSTS</h3>
+        <div class="blog">
+          <img src="https://www.w3schools.com/w3images/workshop.jpg" class="foot-img">
+          <div>
+            <span>Lorem</span><br>
+            <span>Sed mattis nunc</span>
+          </div>
+        </div>
+        <div class="blog">
+          <img src="https://www.w3schools.com/w3images/gondol.jpg" class="foot-img">
+          <div>
+            <span>Ipsum</span><br>
+            <span>Praes tinci sed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer1">
+        <h3>POPULAR TAGS</h3>
+        <span class="travel">Travel</span>
+        <span class="tour">Dinner</span>
+        <span class="tour">New York</span>
+        <span class="tour">Salmon</span>
+        <span class="tour">France</span><br>
+        <span class="tour">Drinks</span>
+        <span class="tour">Ideas</span>
+        <span class="tour">Flavors</span>
+        <span class="tour">Cuisine</span>
+        <span class="tour">Chicken</span><br>
+        <span class="tour">Dressing</span>
+        <span class="tour">Fried</span>
+        <span class="tour">Fish</span>
+        <span class="tour">Duck</span>
+      </div>
+    </div>
+
+    <div class="last">
+      <h3>Done by @Srinu</h3>
+    </div>
+  </div>
+</body>
+</html>
