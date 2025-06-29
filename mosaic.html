@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mosaic View</title>
+  <style>
+    body {
+      background: black;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-con: center; */
+    }
+
+    h1 {
+      width:100%;
+      background-color: grey;
+      height:50px;
+      padding:10px;
+      text-align: center;
+      margin: 40px 0 20px;
+      color: white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-shadow: 2px 2px 4px rgba(202, 29, 29, 0.4);
+    }
+
+    .mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-auto-rows: 150px;
+      gap: 30px;
+      /* max-width: 1000px; */
+      width: 100%;
+      /* height: 200vh; */
+      padding: 10px;
+      border-radius: 82px;
+      /* margin-left: 80px; */
+      /* background-color: black; */
+      overflow: hidden;
+      justify-items: center;
+    }
+
+    .mosaic-grid img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      /* border-radius: 12px; */
+      display: block;
+    }
+
+    /* Optional: Make some images span more rows/columns */
+    /* .mosaic-grid img.wide {
+      grid-column: span 2;
+    }
+
+    .mosaic-grid img.tall {
+      grid-row: span 2;
+    }
+
+    .mosaic-grid img.big {
+      grid-column: span 2;
+      grid-row: span 2;
+    } */
+    .mosaic-grid>#img1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .mosaic-grid>#img2{
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    .mosaic-grid>#img3{
+        grid-column: 3/5;
+        grid-row: 1/3;
+    }
+    .mosaic-grid>#img4{
+        grid-column: 4/6;
+        grid-row: 1/3;
+    }
+    .mosaic-grid>#img5{
+        grid-column: 5/7;
+        grid-row: 1/4;
+    }
+    .mosaic-grid>#img6{
+        grid-column: 1/3;
+        grid-row: 3/5;
+    }
+    .mosaic-grid>#img7{
+        grid-column: 2/4;
+        grid-row: 2/4;
+    }
+    .mosaic-grid>#img8{
+        grid-column: 3/5;
+        grid-row: 3/6;
+    }
+    .mosaic-grid>#img9{
+        grid-column: 4/6;
+        grid-row: 3/5;
+    }
+    .mosaic-grid>#img10{
+        grid-column: 1/3;
+        grid-row: 5/9;
+    }
+    /* .mosaic-grid>#img11{
+        grid-column: 1/3;
+        grid-row: 5/7;
+    } */
+    .mosaic-grid>#img11{
+        grid-column: 2/4;
+        grid-row: 4/10;
+    }
+    .mosaic-grid>#img12{
+        grid-column: 3/5;
+        grid-row: 6/11;
+    }
+    .mosaic-grid>#img13{
+        grid-column: 4/6;
+        grid-row: 5/8;
+    }
+    .mosaic-grid>#img14{
+        grid-column: 5/7;
+        grid-row: 4/9;
+    }
+    .mosaic-grid>#img15{
+        grid-column:1/3 ;
+        grid-row: 9/11;
+    }
+    .mosaic-grid>#img16{
+        grid-column:2/4 ;
+        grid-row: 10/11;
+    }
+    .mosaic-grid>#img17{
+        grid-column:4/6 ;
+        grid-row: 8/11;
+    }
+    .mosaic-grid>#img18{
+        grid-column:5/7 ;
+        grid-row: 9/11;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mosaic View</h1>
+
+  <div class="mosaic-grid">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.1xX4yvvHcM7IhjbfG1tRrQHaEK?pid=Api&P=0&h=220" id="img1" >
+    <img src="https://tse2.mm.bing.net/th/id/OIP.TD2U8hAXh6FqqhX6Z-6OnQHaNK?pid=Api&P=0&h=220" id="img2">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.1fHJS3iMkE6l0PgTAwe6swHaEK?pid=Api&P=0&h=220" id="img3">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.RJKxKh1nfSLURdQFyFrjjAHaDt?pid=Api&P=0&h=220" id="img4">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.9KUH1Uy9grF3sVNB7zZsRwHaDy?pid=Api&P=0&h=220" id="img5">
+    <img src="https://tse2.mm.bing.net/th?id=OIF.aUoLCNofKePPW%2bcfrC8cJg&pid=Api&P=0&h=220" id="img6">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.wB-Bru56Ax5OYQlLtGLj3gHaEK?pid=Api&P=0&h=220" id="img7">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.JifmLYafo4znlEGFEuBCRAHaEK?pid=Api&P=0&h=220" id="img8">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.WayUHiZKY1q99h7uScFV6AHaEK?pid=Api&P=0&h=220" id="img9">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.2w0Rwov6v4sdbRCrXzBDjwHaHa?pid=Api&P=0&h=220" id="img10">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.iUkfxseI3srGci-xglr0hQHaKl?pid=Api&P=0&h=220" id="img11">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.N6Pw0s5LzIhdC1nHp4mRqgHaIA?pid=Api&P=0&h=220" id="img12">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.rKpvtU-5PAfoX2YfMkc4mQHaEK?pid=Api&P=0&h=220" id="img13">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.JFdyME23asyB4P_J9NOlMAHaHO?pid=Api&P=0&h=220" id="img14">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.8hf5BvFPiuahVB29353t1wHaKX?pid=Api&P=0&h=220" id="img15">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.zJZ7bjDuV_Lb5LxXjZdAHQHaEw?pid=Api&P=0&h=220" id="img16">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.rIfwWl5O8GEGhXSABeCqPgHaDt?pid=Api&P=0&h=220" id="img17">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.w9byDqZ1Ym_lcY4k_f8UeAHaEK?pid=Api&P=0&h=220" id="img18">
+    
+  </div>
+
+</body>
+</html>
