@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architect Template</title>
+  <style>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .img-div {
+      position: relative;
+    }
+
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+    .title span {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+    }
+
+    .house-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .nav-bar {
+      background-color: white;
+      height: 60px;
+      width: 100%;
+      position: fixed;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav,
+    .logo {
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      padding: 10px 15px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav:hover,
+    .logo:hover {
+      background-color: grey;
+      color: white;
+    }
+
+    .img {
+      margin: 5px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
+
+    .house {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100px;
+      color: white;
+      margin: 0;
+      padding: 10px;
+    }
+
+    .authors {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .about {
+      width: 100%;
+    }
+
+    .authors h4 {
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .authors button {
+      width: 100%;
+      height: 40px;
+      border: none;
+    }
+
+    button:hover {
+      background-color: rgb(90, 87, 87);
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .submit {
+      background-color: black;
+      color: white;
+      width: 200px;
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .submit:hover {
+      background-color: grey;
+    }
+
+    .foot {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .main-container {
+      padding: 0 20px;
+    }
+
+    .img-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .about-us {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .last-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .img-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .about-us {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .img-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-us {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-bar {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px;
+        background-color: none;
+      }
+
+      .nav, .logo {
+        font-size: 18px;
+        padding: 8px 0;
+        width: 100%;
+      }
+
+      .title span {
+        font-size: 20px;
+      }
+
+      .house-image {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .img-container {
+        grid-template-columns: 1fr;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      .title span {
+        font-size: 16px;
+        padding: 6px;
+      }
+
+      .house-image {
+        height: 160px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-bar">
+    <a href="#" class="logo"><strong>BR</strong> Architects</a>
+    <a href="#projects" class="nav">Projects</a>
+    <a href="#about" class="nav">About</a>
+    <a href="#contact" class="nav">Contact</a>
+  </div>
+
+  <div class="main-container">
+    <div class="img-div">
+      <img src="https://www.w3schools.com/w3images/architect.jpg" alt="Architect Image" style="width:100%;" />
+      <h1 class="title"><span>B R</span> Architects</h1>
+    </div>
+
+    <br id="projects"><br>
+    <h2>Projects</h2><br>
+
+    <div class="img-container">
+      <!-- Images -->
+      <div class="img"><img src="https://www.w3schools.com/w3images/house5.jpg" class="house-image"><h3 class="house">Summer House</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house2.jpg" class="house-image"><h3 class="house">Brick House</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house3.jpg" class="house-image"><h3 class="house">Renovated</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house4.jpg" class="house-image"><h3 class="house">Barn House</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house1.jpg" class="house-image"><h3 class="house">Duplex</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house2.jpg" class="house-image"><h3 class="house">Brick House</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house4.jpg" class="house-image"><h3 class="house">Barn House</h3></div>
+      <div class="img"><img src="https://www.w3schools.com/w3images/house3.jpg" class="house-image"><h3 class="house">Renovated</h3></div>
+    </div>
+
+    <br id="about"><br>
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><br>
+
+    <div class="about-us">
+      <div class="authors"><img src="https://www.w3schools.com/w3images/team2.jpg" class="about"><h3>John Doe</h3><h4>CEO & Founder</h4><p>Phasellus eget enim eu lectus faucibus vestibulum...</p><button>Contact</button></div>
+      <div class="authors"><img src="https://www.w3schools.com/w3images/team1.jpg" class="about"><h3>Jane Doe</h3><h4>Architect</h4><p>Phasellus eget enim eu lectus faucibus vestibulum...</p><button>Contact</button></div>
+      <div class="authors"><img src="https://www.w3schools.com/w3images/team3.jpg" class="about"><h3>Mike Ross</h3><h4>Architect</h4><p>Phasellus eget enim eu lectus faucibus vestibulum...</p><button>Contact</button></div>
+      <div class="authors"><img src="https://www.w3schools.com/w3images/team4.jpg" class="about"><h3>Dan Star</h3><h4>Architect</h4><p>Phasellus eget enim eu lectus faucibus vestibulum...</p><button>Contact</button></div>
+    </div>
+
+    <br id="contact"><br>
+    <h2>Contact</h2>
+    <hr />
+    <p>Lets get in touch and talk about your next project.</p>
+    <form>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="text" placeholder="Subject" required />
+      <input type="text" placeholder="Comment" required />
+      <input type="submit" value="SEND MESSAGE" class="submit" />
+    </form><br>
+
+    <div class="last-container">
+      <img src="https://www.w3schools.com/w3images/map.jpg" alt="map" class="map" />
+    </div>
+  </div>
+
+  <p class="foot">Done by @Srinu</p>
+</body>
+</html>
